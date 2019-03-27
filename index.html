@@ -19,16 +19,23 @@
 </script>
 <script type="text/babel">
 function App(props) {
+  console.log(props)
   return (
-    <span className={props.className}>
+    <span>
       My App
     </span>
   );
 }
 
 ReactDOM.render(
-  // Add a className to the App
-  <App className='new-class-name' />,
+  <App
+    className='new-class-name'
+    foo='bar'
+    boolProp={false}
+    numberProp={123}
+    objectProp={{ baz: 'buzz' }}
+    arrayProp={[ '3', '2', '1' ]}
+  />,
   document.querySelector('#application-root')
 );
 </script>
