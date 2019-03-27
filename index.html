@@ -18,16 +18,18 @@
   crossorigin>
 </script>
 <script type="text/babel">
-function App() {
+function App(props) {
+  console.log(props)
   return (
-    <span id='app-id' className='app-class'>
+    <span className='app-class'>
       My App
     </span>
   );
 }
 
 ReactDOM.render(
-  <App />,
+  // Add a className to the App
+  <App className='new-class-name' />,
   document.querySelector('#application-root')
 );
 </script>
