@@ -19,23 +19,18 @@
 </script>
 <script type="text/babel">
 function App(props) {
-  console.log(props)
   return (
-    <span>
-      My App
-    </span>
+    <header>
+      {props.children}
+    </header>
   );
 }
 
+// Nested elements inside the App.
 ReactDOM.render(
-  <App
-    className='new-class-name'
-    foo='bar'
-    boolProp={false}
-    numberProp={123}
-    objectProp={{ baz: 'buzz' }}
-    arrayProp={[ '3', '2', '1' ]}
-  />,
+  <App className='my-class'>
+    <h1>Current Page Title!</h1>
+  </App>,
   document.querySelector('#application-root')
 );
 </script>
