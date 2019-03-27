@@ -19,9 +19,8 @@
 </script>
 <script type="text/babel">
 function App(props) {
-  console.log(props)
   return (
-    <span className='app-class'>
+    <span className={props.className}>
       My App
     </span>
   );
